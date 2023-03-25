@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        style="@style/parent.contentLayout"
+        android:background="@android:color/transparent"
+        tools:context="com.example.quizmaster.Activity.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:visibility="gone"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll_view"
+            android:fillViewport="true"
+            android:layout_gravity="center">
+
+        <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+            <TextView
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    style="@style/viewParent"
+                    android:text="Create Course"
+                    android:layout_gravity="center"
+                    android:textSize="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/purple_700"
+                    android:textStyle="bold"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputNameCourse"
+                    style="@style/parent.TextLayout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextNameCourse"
+                        style="@style/modifiedEditText"
+                        android:textColor="@color/purple_500"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_height="56dp"
+                        android:hint="Name Course"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputDescriptionCourse"
+                    style="@style/parent.TextLayout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextDescriptionCourse"
+                        style="@style/modifiedEditText"
+                        android:textColor="@color/purple_500"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_height="56dp"
+                        android:hint="Description Course"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_login_button"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:id="@+id/course_id"
+                    android:contentDescription="Add Course"
+                    android:onClick="courseAdd"
+                    android:layout_gravity="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputTitileLectures"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextTitileLectures"
+                        style="@style/modifiedEditText"
+                        android:textColor="@color/purple_500"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:hint="Title Lectures"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputDescriptionLectures"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextDescriptionLectures"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:textColor="@color/purple_500"
+                        android:maxLines="1"
+                        android:hint="Description Lectures"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLectureLectures"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextLectureLectures"
+                        style="@style/modifiedEditText"
+                        android:inputType="text|textMultiLine"
+                        android:textColor="@color/purple_500"
+                        android:maxLines="100"
+                        android:gravity="top|left"
+                        android:overScrollMode="always"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:lines="6"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:scrollHorizontally="false"
+                        android:hint="Lecture Lectures"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_login_button"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:onClick="lecturesAdd"
+                    android:id="@+id/lectures_id"
+                    android:layout_gravity="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuizzName"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuizzName"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:textColor="@color/purple_500"
+                        android:maxLines="1"
+                        android:hint="Quizz Name"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuizzDescription"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuizzDescription"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Quizz Description"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_login_button"
+                    android:textColor="@color/white"
+                    android:layout_margin="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/quizz_id"
+                    android:onClick="quizzAdd"
+                    android:layout_gravity="center"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuestion"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuestion"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Question"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputCorrectAnswer"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextCorrectAnswer"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:textColor="@color/purple_500"
+                        android:maxLines="1"
+                        android:hint="Correct Answer"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuestion1"
+                    android:visibility="gone"
+                    style="@style/parent.TextLayout"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuestion1"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Answer 1"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuestion2"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuestion2"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Answer 2"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuestion3"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuestion3"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Answer 3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputQuestion4"
+                    style="@style/parent.TextLayout"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                        android:id="@+id/editTextQuestion4"
+                        style="@style/modifiedEditText"
+                        android:inputType="text"
+                        android:layout_marginBottom="20dp"
+                        android:maxLines="1"
+                        android:textColor="@color/purple_500"
+                        android:hint="Answer 4"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                    android:id="@+id/buttons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:orientation="horizontal"
+                    android:layout_weight="2"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp">
+
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:background="@drawable/add_xml"
+                    android:textColor="@color/white"
+                    android:layout_margin="40dp"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:onClick="addQuiz"
+                    android:id="@+id/add_button"/>
+
+                <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_login_button"
+                        android:textColor="@color/white"
+                        android:layout_margin="40dp"
+                        android:onClick="questionAdd"
+                        android:visibility="gone"
+                        android:layout_weight="1"
+                        android:id="@+id/questions_id"
+                        android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

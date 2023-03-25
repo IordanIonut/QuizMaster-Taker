@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quiz Master</string>
+    <string name="home_teacher">Welcome to our educational platform! As a teacher, you can create engaging quizzes and
+        courses to help your students learn and grow. Let’s get started on creating an amazing learning experience!
+    </string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

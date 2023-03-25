@@ -1,0 +1,96 @@
+<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:focusableInTouchMode="true"
+            style="@style/parent.contentLayout"
+            tools:context="com.example.quizmaster.Activity.QuizsActivity">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/quizName"
+                android:cropToPadding="true"
+                android:gravity="center"
+                android:hint="sdasdasdsa"
+                android:textStyle="bold"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="asdasdasdasd"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+        <TextView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="@string/home_teacher"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/quizDesctiption"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scroll_view12"
+            android:fillViewport="true"
+            android:layout_gravity="center">
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recycler_view_quiz"
+                android:visibility="gone"
+                android:layout_height="match_parent"/>
+
+    </ScrollView>
+
+    <Button
+            android:id="@+id/startQuizNow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/ic_login_button"
+            android:contentDescription="Add Course"
+            android:onClick="startQuizNow"
+            android:textColor="@color/white"/>
+
+    <Button
+            android:id="@+id/courseNow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:rotation="-180"
+            android:background="@drawable/ic_login_button"
+            android:contentDescription="Add Course"
+            android:onClick="courseNow"
+            android:textColor="@color/white"/>
+
+
+</RelativeLayout>

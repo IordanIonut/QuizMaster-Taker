@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:context="com.example.quizmaster.Activity.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:visibility="gone"
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linear_layout11"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/scroll_view1234"
+                android:fillViewport="true"
+                android:layout_gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_view_userCourses"
+                    android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/linear_layout22"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="Orientation">
+
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/scroll_view12345"
+                android:fillViewport="true"
+                android:layout_gravity="center">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:id="@+id/recycler_view_lecture"
+                    android:layout_height="wrap_content"/>
+
+        </ScrollView>
+
+        <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_login_button"
+                android:textColor="@color/white"
+                android:layout_marginLeft="40dp"
+                android:id="@+id/backUser"
+                android:rotation="-180"
+                android:contentDescription="Add Course"
+                android:onClick="backUser"
+                android:layout_marginBottom="40dp"
+                android:layout_gravity="bottom"
+                android:gravity="bottom"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

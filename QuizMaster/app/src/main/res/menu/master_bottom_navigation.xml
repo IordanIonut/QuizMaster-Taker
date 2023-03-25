@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigationHome"
+            android:icon="@drawable/home"
+            android:title="HOME" />
+
+    <item
+            android:id="@+id/navigationMyCourses"
+            android:icon="@drawable/outline_article_black_24dp"
+            android:title="COURSES" />
+
+    <item
+            android:id="@+id/navigationAddCourse"
+            android:icon="@drawable/outline_add_black_24dp"
+            android:title="CREATE" />
+
+    <item
+            android:id="@+id/navigationPerson"
+            android:icon="@drawable/outline_person_black_24dp"
+            android:title="PERSON" />
+
+
+</menu>

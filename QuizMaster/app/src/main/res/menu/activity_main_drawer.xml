@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_camera"
+                android:icon="@drawable/facebook_button"
+                android:title="Import" />
+        <item
+                android:id="@+id/nav_gallery"
+                android:icon="@drawable/facebook_button"
+                android:title="Gallery" />
+        <item
+                android:id="@+id/nav_slideshow"
+                android:icon="@drawable/facebook_button"
+                android:title="Slideshow" />
+        <item
+                android:id="@+id/nav_manage"
+                android:icon="@drawable/facebook_button"
+                android:title="Tools" />
+    </group>
+
+    <item android:title="Only Toggle Theme would work">
+        <menu>
+            <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/ic_user"
+                    android:title="Share" />
+            <item
+                    android:id="@+id/nav_dark_mode"
+                    android:title="Toggle Theme" />
+        </menu>
+    </item>
+
+</menu>

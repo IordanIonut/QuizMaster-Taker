@@ -1,0 +1,271 @@
+<RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="visible"
+            android:id="@+id/quizzPreview"
+            android:paddingRight="10dp"
+            android:focusableInTouchMode="true"
+            style="@style/parent.contentLayout"
+            tools:context="com.example.quiztaker.Activity.QuizsActivity">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/quizName"
+                android:cropToPadding="true"
+                android:gravity="center"
+                android:hint="sdasdasdsa"
+                android:textStyle="bold"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="asdasdasdasd"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+        <TextView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="@string/home_teacher"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/quizDesctiption"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:id="@+id/quizzStart"
+            android:focusableInTouchMode="true"
+            style="@style/parent.contentLayout"
+            tools:context="com.example.quiztaker.Activity.QuizsActivity">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:gravity="center"
+                android:hint="sdasdasdsa"
+                android:textStyle="bold"
+                android:id="@+id/numberQuestion"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="0 / 10"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+        <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:id="@+id/timerQuestion"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                style="@style/viewParent"
+                android:text="12"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="bottom"
+                android:textColor="@color/purple_700"/>
+
+        <TextView
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="@string/home_teacher"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:id="@+id/questionQuestion"
+                android:layout_marginTop="70dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+        <Button
+                android:id="@+id/btnR1"
+                android:onClick="btnR1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="@color/purple_500"
+                android:text="@string/raspuns1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_border"
+                android:layout_above="@+id/btnR2"
+                android:layout_centerInParent="true"/>
+
+        <Button
+                android:id="@+id/btnR2"
+                android:onClick="btnR2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:textColor="@color/purple_500"
+                android:layout_marginRight="30dp"
+                android:text="@string/raspuns2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/button_border"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_above="@+id/btnR3"/>
+
+        <Button
+                android:id="@+id/btnR3"
+                android:onClick="btnR3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:layout_marginRight="30dp"
+                android:text="@string/raspuns3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/button_border"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/purple_500"
+                android:layout_above="@+id/btnR4"/>
+
+        <Button
+                android:id="@+id/btnR4"
+                android:onClick="btnR4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textAlignment="center"
+                android:textSize="12sp"
+                android:background="@drawable/button_border"
+                android:layout_marginRight="30dp"
+                android:text="@string/raspuns4"
+                android:textColor="@color/purple_500"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            android:paddingRight="10dp"
+            android:id="@+id/quizzNext"
+            android:focusableInTouchMode="true"
+            style="@style/parent.contentLayout"
+            tools:context="com.example.quiztaker.Activity.QuizsActivity">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:gravity="center"
+                android:hint="sdasdasdsa"
+                android:textStyle="bold"
+                android:id="@+id/finallScore"
+                android:layout_marginTop="105dp"
+                android:layout_marginBottom="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                style="@style/viewParent"
+                android:text="5 POINT"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/purple_700"/>
+
+        <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/image"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"/>
+
+    </LinearLayout>
+
+    <Button
+            android:id="@+id/startQuizNow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:visibility="visible"
+            android:background="@drawable/ic_login_button"
+            android:contentDescription="Add Course"
+            android:onClick="startQuizNow"
+            android:textColor="@color/white"/>
+
+    <Button
+            android:id="@+id/courseNow"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:rotation="-180"
+            android:background="@drawable/ic_login_button"
+            android:contentDescription="Add Course"
+            android:onClick="courseNow"
+            android:textColor="@color/white"/>
+
+</RelativeLayout>
